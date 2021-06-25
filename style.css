@@ -1,4 +1,17 @@
-  .logo {
-    width: 300px;
+.logo {
+  width: 300px;
 }
 
+.input {
+  height: 50px;
+  border-radius: 15px;
+  padding-left: 10px;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.message-error {
+  color: red;
+}
