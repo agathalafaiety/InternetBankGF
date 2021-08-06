@@ -4,8 +4,10 @@
 .input{
   height: 60px;
   border-radius: 15px;
-  padding-left: 10px;
   font-size: 20px;
+  padding-left: 10px;
+  border-color: black;
+  border-width: 2px;
 }
 .input:focus{
   box-shadow: 0 0 0 0;
