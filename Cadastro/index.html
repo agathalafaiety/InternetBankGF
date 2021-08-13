@@ -41,18 +41,18 @@
       <div class="message-error d-flex justify-content-center mt-2" id="cpfError"></div>
 
       <div class="input-form d-flex justify-content-center">
-        <input type="text" placeholder="Digite a E-mail" id="email" class="input col-10 col-lg-8 mt-4">
+        <input type="text" onchange="validarEmail()" placeholder="Digite a E-mail" id="email" class="input col-10 col-lg-8 mt-4">
       </div>
       <div class="message-error d-flex justify-content-center mt-2" id="emailError"></div>
 
       <div class="input-form d-flex justify-content-center">
-        <input type="number" maxlength="3" placeholder="Digite a idade" id="idade" class="input col-10 col-lg-8 mt-4">
+        <input type="number" onchange="validarIdade()" maxlength="3" placeholder="Digite a idade" id="idade" class="input col-10 col-lg-8 mt-4">
       </div>
       <div class="message-error d-flex justify-content-center mt-2" id="idadeError"></div>
 
 
       <div class="input-form d-flex justify-content-center mt-2">
-        <select id="sexo" class="input col-10 col-lg-8 mt-4">
+        <select onchange="selecionarSexo()" id="sexo" class="input col-10 col-lg-8 mt-4">
           <option value="" disabled selected>Selecione o sexo</option>
           <option value="M">M</option>
           <option value="F">F</option>
@@ -61,12 +61,11 @@
       <div class="message-error d-flex justify-content-center" id="sexoError"></div>
 
       <div class="input-form d-flex justify-content-center">
-        <input type="password" maxlength="4" placeholder="Digite a Senha" id="senha" class="input col-10 col-lg-8 mt-4">
+        <input type="password" onchange="digitarSenha()" maxlength="4" placeholder="Digite a Senha" id="senha" class="input col-10 col-lg-8 mt-4">
       </div>
-      <div class="message-error d-flex justify-content-center mt-2" id="senhaError"></div>
 
       <div class="input-form d-flex justify-content-center">
-        <input type="password" maxlength="4" placeholder="Confirmar a senha" id="confirmacaoSenha"
+        <input type="password" onchange="validarSenha()" maxlength="4" placeholder="Confirmar a senha" id="confirmacaoSenha"
           class="input col-10 col-lg-8 mt-4">
       </div>
       <div class="message-error d-flex justify-content-center mt-2" id="confirmacaoSenhaError"></div>
