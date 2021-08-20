@@ -16,16 +16,50 @@ const pegarDadosDoLocalStorage = () => {
   return JSON.parse(localStorage.getItem("internetBank-GF"));
 };
 
-const criarAgencia = () => {};
+const criarAgencia = () => {
+  const bancoAtual = pegarDadosDoLocalStorage();
+  bancoAtual.agencias.push({
+    numero: bancoAtual.agencias.length + 1,
+    contas: [formatarConta(conta, 0001)],
+  });
+};
+
+const pegarDadosDoLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("internetBank-GF"));
+};
 
 const salvarConta = (conta) => {
   try {
-    if (bancoatual.agencias) {
+    const bancoAtual = pegarDadosDoLocalStorage();
+    const contas = ultimaAgencia.conta;
+    const ultimaAgencia = bancoAtual.filter(
+      (agencia) => bancoAtual.agencias.lenght - 1
+    );
+    const agenciaAnalisada =
+      bancoAtual.agencias[bancoAtual.agencias.lenght - 1];
+    if (agenciaAnalisada == 9999) {
+      criarAgencia(contas);
     } else {
-      console.log("A conta sera criada em uma agencia existente ");
+      const conta = contas.push(bancoAtual.contas.lenght + 1);
+      const pegarDadosDoLocalStorage = () => {
+        return JSON.parse(localStorage.getItem("internetBank-GF"));
+      };
     }
     return "Conta criada com sucesso!";
   } catch (erro) {
     return "Houve um erro ao criar a conta: " + erro;
   }
+};
+const formatarConta = (conta, numeroDaConta) => {
+  const novoUsuario = (
+    cpfDigitado,
+    senhaDigitada,
+    numeroDaConta,
+    conta,
+    idadeDigitada
+  ) => {
+    const novaConta = (senhaDigitada, novoUsuario) => {
+      return novaConta;
+    };
+  };
 };
