@@ -5,5 +5,13 @@
 }
 
 a{
-  color: green;
+  color: green !important;
+}
+
+.label{
+  color: green
+}
+
+.hide {
+  display: none;
 }

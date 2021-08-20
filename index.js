@@ -1,5 +1,5 @@
 
-salvarDadosNoLocalStorage();
+salvarDadosDoBancoNoLocalStorage();
 const bancoCadastrado = pegarDadosDoLocalStorage()
   
 function criarConta() {
