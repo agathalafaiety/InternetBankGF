@@ -4,18 +4,24 @@ var agenciaDigitada;
 var contaDigitada;
 var agenciaEncontrada;
 var contaEncontrada;
+var saldo = usuarioLogado.conta.saldo;
 const bancoAtual = pegarDadosDoLocalStorage("internetBank-GF");
 var erros = [];
 
 window.addEventListener('load',
     function() {
         document.getElementById("nome").innerHTML = usuarioLogado.conta.usuario.nome;
-        document.getElementById("saldo").innerHTML = usuarioLogado.conta.saldo;
+        document.getElementById("saldo").innerHTML = saldo;
     });
+
+const sair = () => {
+    excluirDadosNoLocalStorage("usuario-logado");
+    window.location.href = "../index.html";
+};
 
 const validarValor = () => {
     valorDigitado = document.getElementById("valor").value;
-    if (usuarioLogado.conta.saldo < valorDigitado) {
+    if (saldo < valorDigitado) {
         erros.push("valor");
         document.getElementById("valorError").innerHTML = "O seu saldo é insuficiente, digite outro valor";
     } else {
@@ -59,7 +65,13 @@ const transferir = () => {
             bancoAtual.agencias.find(agencia => agencia.numero == agenciaDigitada)
                 .contas.find(conta => conta.numero == contaDigitada).saldo += parseFloat(valorDigitado);
 
+            var usuarioLogadoAtualizado = bancoAtual.agencias.find(agencia => agencia.numero == usuarioLogado.agencia.numero)
+                .contas.find(conta => conta.numero == usuarioLogado.conta.numero);
+
+            saldo = usuarioLogadoAtualizado.saldo;
             salvarDadosNoLocalStorage("internetBank-GF", bancoAtual);
+            salvarDadosNoLocalStorage("usuario-logado", usuarioLogadoAtualizado);
+            document.getElementById("saldo").innerHTML = saldo;
 
             alert("Transferencia feita com sucesso!");
         } catch (error) {
@@ -68,19 +80,3 @@ const transferir = () => {
 
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bancoAtual.agencias.find(agencia => agencia.numero == agenciaDigitada)
-    .contas(conta => conta.numero == contaDigitada).saldo += valorDigitado;

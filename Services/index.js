@@ -17,6 +17,10 @@ const salvarDadosNoLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value));
 };
 
+const excluirDadosNoLocalStorage = (key) => {
+    localStorage.removeItem(key);
+};
+
 const criarAgencia = (conta) => {
     const bancoAtual = pegarDadosDoLocalStorage("internetBank-GF");
     const numeroDaAgencia = bancoAtual.agencias.length + 1;

@@ -2,6 +2,12 @@
     width: 300px;
 }
 
+.sair {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
 .input {
     height: 60px;
     border-radius: 15px;
