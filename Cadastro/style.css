@@ -1,17 +1,17 @@
-.titulo{
-  font-size: 30px;
-  font-weight: bold;
-  color: green;
+.titulo {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
 }
 
-a{
-  color: green !important;
+a {
+    color: green !important;
 }
 
-.label{
-  color: green
+.label {
+    color: green
 }
 
 .hide {
-  display: none;
+    display: none;
 }

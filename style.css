@@ -1,26 +1,31 @@
-.logo{
-  width: 300px;
+.logo {
+    width: 300px;
 }
-.input{
-  height: 60px;
-  border-radius: 15px;
-  font-size: 20px;
-  padding-left: 10px;
-  border-color: black;
-  border-width: 2px;
+
+.input {
+    height: 60px;
+    border-radius: 15px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-color: black;
+    border-width: 2px;
 }
-.input:focus{
-  box-shadow: 0 0 0 0;
-  outline: 0;
+
+.input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
 }
-.button{
-  height: 60px;
-  border-radius: 15px;
-  font-size: 20px;
+
+.button {
+    height: 60px;
+    border-radius: 15px;
+    font-size: 20px;
 }
+
 .input-error {
-  border-color: red; 
+    border-color: red;
 }
-.message-error{
-  color: red;
+
+.message-error {
+    color: red;
 }

@@ -1,6 +1,6 @@
 class Agencia {
-  constructor(numero, contas){
-    this.numero = numero
-    this.contas = contas
-  }
+    constructor(numero, contas) {
+        this.numero = numero;
+        this.contas = contas;
+    }
 }
