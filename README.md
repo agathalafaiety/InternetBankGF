@@ -1,2 +1,2 @@
 # InternetBankGF
-Projeto desenvolvido durante o curso de Desenvolvimento Web da Microsoft • Gerando Falcões
+Site desenvolvido durante o curso de Desenvolvimento Web • Gerando Falcões
